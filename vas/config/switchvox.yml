@@ -1,0 +1,11 @@
+default:
+   switchvox_ip: 10.10.5.240
+   faye_ip: 10.10.5.208
+
+development:
+   switchvox_ip: 10.10.5.240
+   faye_ip: 10.10.5.208
+
+production:
+   switchvox_ip: 10.10.5.240
+   faye_ip: 10.10.5.208

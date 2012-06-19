@@ -1,7 +1,7 @@
 require 'switchvox'
  class Switchvox_call
    def self.calling(dial_number, exten_number)
-      switchvox = Switchvox::Base.new("10.10.5.240", 'admin', 'Passw0rd', {:debug => false})
+      switchvox = Switchvox::Base.new("#{CONFIG[:switchvox_ip]}", 'admin', 'Passw0rd', {:debug => false})
 
       getInfo = switchvox.request("switchvox.extensions.getInfo", {
         "extensions" => [exten_number],
@@ -18,7 +18,7 @@ require 'switchvox'
 
 
 def self.getinfo(exten_number)
-   switchvox = Switchvox::Base.new("10.10.5.240", 'admin', 'Passw0rd', {:debug => true})
+   switchvox = Switchvox::Base.new("#{CONFIG[:switchvox_ip]}", 'admin', 'Passw0rd', {:debug => true})
    account_id = switchvox.request("switchvox.extensions.getInfo", {
    "extension" => exten_number})
 

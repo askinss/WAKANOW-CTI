@@ -1,0 +1,12 @@
+#!/bin/bash 
+    pkill "rackup" 
+    pkill "rails"
+    pkill  "beanstalkd" 
+    pkill "stalk" 
+    /usr/local/bin/beanstalkd -d 
+    cd ~/Desktop/vas/vas 
+    /home/zeep/.rvm/gems/ruby-1.9.2-p290/bin/rackup faye.ru -s thin -E production &
+    /home/zeep/.rvm/gems/ruby-1.9.2-p290/bin/rails s thin&
+    /home/zeep/.rvm/gems/ruby-1.9.2-p290/bin/stalk ./config/job.rb &
+    /home/zeep/.rvm/rubies/ruby-1.9.2-p290/bin/ruby mail.rb
+

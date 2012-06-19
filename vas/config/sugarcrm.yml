@@ -1,7 +1,7 @@
 development:
   base_url: http://10.10.5.104:8080/wakanow # where your SugarCRM instance is located
   username: admin
-  password: password
+  password: Passw0rd2
   # connection pool settings
   # if you don't know what purpose this serves, you can safely ignore these settings
   # works similarly to Rails' database connection pooling (documented here: http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html)
@@ -11,9 +11,9 @@ development:
 test:
   base_url: http://10.10.5.104:8080/wakanow
   username: admin
-  password: password
+  password: Passw0rd2
 
 production:
   base_url: http://10.10.5.104:8080/wakanow
   username: admin
-  password: password
+  password: Passw0rd2

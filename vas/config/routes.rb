@@ -4,7 +4,9 @@ Vas2::Application.routes.draw do
   end
   resources :externcall 
   match '/externcall/new' => 'externcall#new'
- 
+  resources :ajaxsearch 
+  match '/ajaxsearch/new' => 'ajaxsearch#new'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

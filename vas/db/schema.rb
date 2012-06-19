@@ -10,13 +10,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110729115539) do
+ActiveRecord::Schema.define(:version => 20110819092554) do
 
   create_table "ajaxcalls", :force => true do |t|
     t.string   "cid_number"
     t.string   "exten_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
+  create_table "ajaxsearches", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "extenno"
+    t.string   "caller_id"
+  end
+
+  create_table "answereds", :force => true do |t|
+    t.string   "exten_num"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "extens", :force => true do |t|
+    t.string   "exten_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "externcalls", :force => true do |t|
     t.string   "a"
@@ -30,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20110729115539) do
     t.string   "exten_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "exten_id"
   end
 
 end
